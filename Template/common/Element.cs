@@ -1,24 +1,26 @@
-using OpenTK.Graphics.OpenGL4;
+using Template.common;
 using OpenTK.Mathematics;
-using OpenTK.Windowing.Common;
+
+using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.GraphicsLibraryFramework;
-using Template.buffers;
 
-namespace Template
+namespace Template.common
 {
-    public class Object
+    
+
+    public class Element : IElement
     {
-        private Vector2 offset = Vector2.Zero;
+        protected Vector2 offset = Vector2.Zero;
 
-        private VBO vbo;
-        private VAO vao;
-        private EBO ebo;
-        private Shader shader;
+        protected VBO vbo;
+        protected VAO vao;
+        protected EBO ebo;
+        protected Shader shader;
 
-        private float[] vertices;
-        private uint[] indices;
+        protected float[] vertices;
+        protected uint[] indices;
 
-        public Object(float[] vertices, uint[] indices)
+        public Element(float[] vertices, uint[] indices)
         {
             this.vertices = vertices;
             this.indices = indices;
@@ -40,20 +42,6 @@ namespace Template
             this.shader = new Shader("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
         }
 
-        public void EventHandle(KeyboardState keyboardState)
-        {
-            const float moveSpeed = 0.001f;
-
-            if (keyboardState.IsKeyDown(Keys.Left))
-                this.Move(-moveSpeed, 0);
-            if (keyboardState.IsKeyDown(Keys.Right))
-                this.Move(moveSpeed, 0);
-            if (keyboardState.IsKeyDown(Keys.Up))
-                this.Move(0, moveSpeed);
-            if (keyboardState.IsKeyDown(Keys.Down))
-                this.Move(0, -moveSpeed);
-        }
-
         public void Move(float x, float y)
         {
             offset += new Vector2(x, y);
@@ -69,6 +57,11 @@ namespace Template
 
             int aspectLocation = GL.GetUniformLocation(shader.ID, "aspectRatio");
             GL.Uniform1(aspectLocation, aspectRatio);
+
+            float time = (float)GLFW.GetTime();
+            // Obtém a localização do uniform "uTime"
+            int uniformLocation = GL.GetUniformLocation(shader.ID, "uTime");
+            GL.Uniform1(uniformLocation, time);
 
             vao.Bind();
             GL.DrawElements(PrimitiveType.Triangles, this.indices.Length, DrawElementsType.UnsignedInt, 0);

@@ -2,6 +2,8 @@ using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using Template.common;
+
 
 namespace Template
 {
@@ -11,7 +13,8 @@ namespace Template
         })
     {
 
-        private Object square;
+        private List<EventHandleObject> elements  = [];
+        private List<Element> basicObjects  = [];
 
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
@@ -22,18 +25,19 @@ namespace Template
                Close(); 
             }
 
-            square.EventHandle(KeyboardState);
+            foreach (EventHandleObject element in elements)
+            {
+                element.EventHandle(KeyboardState);
+            }
 
-            // const float moveSpeed = 0.001f;
+        }
 
-            // if (KeyboardState.IsKeyDown(Keys.Left))
-            //     square.Move(-moveSpeed, 0);
-            // if (KeyboardState.IsKeyDown(Keys.Right))
-            //     square.Move(moveSpeed, 0);
-            // if (KeyboardState.IsKeyDown(Keys.Up))
-            //     square.Move(0, moveSpeed);
-            // if (KeyboardState.IsKeyDown(Keys.Down))
-            //     square.Move(0, -moveSpeed);
+        public void AddElement(EventHandleObject element){
+            elements.Add(element);
+        }
+
+        public void AddBasicObject(Element basicObject){
+            basicObjects.Add(basicObject);
         }
 
         protected override void OnLoad()
@@ -42,21 +46,23 @@ namespace Template
 
             GL.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
-            float[] vertices = {
-                -0.5f, -0.5f, 0.0f,   // Vértice inferior esquerdo
-                0.5f, -0.5f, 0.0f,   // Vértice inferior direito
+            // float[] vertices = {
+            //     -0.5f, -0.5f, 0.0f,   // Vértice inferior esquerdo
+            //     0.5f, -0.5f, 0.0f,   // Vértice inferior direito
 
-                -0.5f,  0.5f, 0.0f,   // Vértice superior esquerdo
-                0.5f,  0.5f, 0.0f,   // Vértice superior direito
-            };
+            //     -0.5f,  0.5f, 0.0f,   // Vértice superior esquerdo
+            //     0.5f,  0.5f, 0.0f,   // Vértice superior direito
+            // };
 
-            uint[] indices = {
-                0, 1, 2,
-                // 1, 2, 3,
-            };
+            // uint[] indices = {
+            //     0, 1, 2,
+            //     1, 2, 3,
+            // };
+
+            // element = new Element(vertices, indices);
 
 
-            square = new Object(vertices, indices);
+            // square = new Circle(2);
 
         }
         
@@ -67,7 +73,12 @@ namespace Template
             GL.Clear(ClearBufferMask.ColorBufferBit);
 
             float aspectRatio = (float)Size.X / Size.Y; // Calcula a razão de aspecto
-            square.Render(aspectRatio);
+            // element.Render(aspectRatio);
+
+            foreach (EventHandleObject element in elements)
+            {
+                element.Render(aspectRatio);
+            }
 
             SwapBuffers();
         }
@@ -82,7 +93,12 @@ namespace Template
         protected override void OnUnload()
         {
             base.OnUnload();
-            square.Dispose();
+            foreach (EventHandleObject element in elements)
+            {
+                element.Dispose();
+            }
+            // element.Dispose();
+            // square.Dispose();
         }
     }
 }

@@ -1,6 +1,6 @@
 using OpenTK.Graphics.OpenGL4;
 
-namespace Template.buffers
+namespace Template.common
 {
     public class VAO
     {
