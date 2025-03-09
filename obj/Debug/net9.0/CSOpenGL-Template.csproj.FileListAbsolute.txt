@@ -1,0 +1,14 @@
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\bin\Debug\net9.0\CSOpenGL-Template.exe
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\bin\Debug\net9.0\CSOpenGL-Template.deps.json
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\bin\Debug\net9.0\CSOpenGL-Template.runtimeconfig.json
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\bin\Debug\net9.0\CSOpenGL-Template.dll
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\bin\Debug\net9.0\CSOpenGL-Template.pdb
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.AssemblyInfoInputs.cache
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.AssemblyInfo.cs
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.csproj.CoreCompileInputs.cache
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.dll
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\refint\CSOpenGL-Template.dll
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.pdb
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\CSOpenGL-Template.genruntimeconfig.cache
+C:\Users\Joao Krapp\Desktop\Programação\FURB\Computacao Grafica\CSOpenGL-Template\obj\Debug\net9.0\ref\CSOpenGL-Template.dll
