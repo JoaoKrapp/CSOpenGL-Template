@@ -1,5 +1,7 @@
 using OpenTK.Graphics.OpenGL4;
 
+using Template.buffers;
+
 namespace Template
 {
     public class Triangle

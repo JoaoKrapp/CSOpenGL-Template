@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\Template\\Template.csproj": {}
+    "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\CSOpenGL-Template\\Template\\Template.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\Template\\Template.csproj": {
+    "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\CSOpenGL-Template\\Template\\Template.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\Template\\Template.csproj",
+        "projectUniqueName": "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\CSOpenGL-Template\\Template\\Template.csproj",
         "projectName": "Template",
-        "projectPath": "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\Template\\Template.csproj",
+        "projectPath": "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\CSOpenGL-Template\\Template\\Template.csproj",
         "packagesPath": "C:\\Users\\Joao Krapp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\Template\\obj\\",
+        "outputPath": "C:\\Users\\Joao Krapp\\Desktop\\Programação\\FURB\\Computacao Grafica\\CSOpenGL-Template\\Template\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Joao Krapp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Joao Krapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

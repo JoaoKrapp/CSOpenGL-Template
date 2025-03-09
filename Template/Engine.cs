@@ -11,7 +11,7 @@ namespace Template
         })
     {
 
-        private Square square;
+        private Object square;
 
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
@@ -22,16 +22,18 @@ namespace Template
                Close(); 
             }
 
-            const float moveSpeed = 0.001f;
+            square.EventHandle(KeyboardState);
 
-            if (KeyboardState.IsKeyDown(Keys.Left))
-                square.Move(-moveSpeed, 0);
-            if (KeyboardState.IsKeyDown(Keys.Right))
-                square.Move(moveSpeed, 0);
-            if (KeyboardState.IsKeyDown(Keys.Up))
-                square.Move(0, moveSpeed);
-            if (KeyboardState.IsKeyDown(Keys.Down))
-                square.Move(0, -moveSpeed);
+            // const float moveSpeed = 0.001f;
+
+            // if (KeyboardState.IsKeyDown(Keys.Left))
+            //     square.Move(-moveSpeed, 0);
+            // if (KeyboardState.IsKeyDown(Keys.Right))
+            //     square.Move(moveSpeed, 0);
+            // if (KeyboardState.IsKeyDown(Keys.Up))
+            //     square.Move(0, moveSpeed);
+            // if (KeyboardState.IsKeyDown(Keys.Down))
+            //     square.Move(0, -moveSpeed);
         }
 
         protected override void OnLoad()
@@ -40,7 +42,21 @@ namespace Template
 
             GL.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
-            square = new Square();
+            float[] vertices = {
+                -0.5f, -0.5f, 0.0f,   // Vértice inferior esquerdo
+                0.5f, -0.5f, 0.0f,   // Vértice inferior direito
+
+                -0.5f,  0.5f, 0.0f,   // Vértice superior esquerdo
+                0.5f,  0.5f, 0.0f,   // Vértice superior direito
+            };
+
+            uint[] indices = {
+                0, 1, 2,
+                // 1, 2, 3,
+            };
+
+
+            square = new Object(vertices, indices);
 
         }
         

@@ -1,7 +1,9 @@
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 
-namespace Template
+using Template.buffers;
+
+namespace Template.shapes
 {
     public class Square
     {

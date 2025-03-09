@@ -1,6 +1,6 @@
 using OpenTK.Graphics.OpenGL4;
 
-namespace Template
+namespace Template.buffers
 {
     public class EBO
     {
